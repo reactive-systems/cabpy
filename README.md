@@ -10,7 +10,7 @@ For instance, these can be installed on Ubuntu with:
 $ apt-get install python3 python3-pip libgmp3-dev
 ```
 
-- [PySMT](https://github.com/pysmt/pysmt) (with [MathSAT](https://mathsat.fbk.eu/) and [Z3](https://github.com/Z3Prover/z3) installed)
+- [PySMT](https://github.com/pysmt/pysmt) (with [MathSAT](https://mathsat.fbk.eu/) and [Z3](https://github.com/Z3Prover/z3) installed).
 These can be installed with:
 ```
 $ pip3 install pysmt
