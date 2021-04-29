@@ -18,6 +18,8 @@ $ pysmt-install --msat
 $ pysmt-install --z3
 ```
 
+For the last two commands to work, please make sure that your $PATH variable contains the installation directory of the pysmt-install script, which will be presented to you after the first command.
+
 #### Usage
 CabPy can be used by invoking the following script:
 ```
