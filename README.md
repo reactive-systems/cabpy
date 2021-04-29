@@ -1,7 +1,8 @@
 #### Tool Description: 
-CabPy is a reachability game solver that exploits cause-effect-relationships in the game graph. The tool is written in Python 3. 
+CabPy is a game solver for linear reachability games that exploits cause-effect-relationships in the game graph. The tool is written in Python 3. 
 
 #### Dependencies
+- Python 3 and pip
 - [PySMT](https://github.com/pysmt/pysmt) (with [MathSAT](https://mathsat.fbk.eu/) and [Z3](https://github.com/Z3Prover/z3) installed)
 These can be installed with:
 ```
@@ -15,10 +16,10 @@ CabPy can be used by invoking the following script:
 ```
 $ cab.py -i file.rg
 ```
-See  `cab.py -h` for additional options on interpolation engine and debug output. 
+See  `cab.py -h` for additional options on debug output. 
 
 #### Examples: 
-We provide several examples in the `examples` folder that can be used as input files, including the newest examples in the `simple` and `hare` folders. The hare example, for instance, encodes the race between the hare and the hedgehog. 
+We provide several examples in the `examples` folder that can be used as input files, including the newest examples in the `simple` and `hare` subfolders. The hare example, for instance, encodes the race between the hare and the hedgehog. 
 
 To provide a new input game to our tool, the reachability game has to be specified in a .rg file of the following structure:
 ```
@@ -40,7 +41,7 @@ We use the following connectives (ordered in precedence from low to high priorit
 + (Plus), - (Minus)
 ```
 As an example, consider the Game of Nim played on two heaps with four stones each
-(see file ./cabpy/examples/nim/nim44.rg):
+(see file 'examples/nim/nim44.rg'):
 ```
 int: x, y
 init: x = 4 & y = 4
@@ -48,7 +49,7 @@ safe: (X < x & X >= 0 & Y = y) | (Y < y  & Y >= 0 & X = x)
 reach: (X < x & X >= 0 & Y = y) | (Y < y  & Y >= 0 & X = x)
 goal: x = 0 & y = 0
 ```
-The game in file './cabpy/examples/simple/mixed1.rg' is played over both Boolean and integer variables:
+The game in file 'examples/simple/mixed1.rg' is played over both Boolean and integer variables:
 ```
 bool: x
 int: z
@@ -58,5 +59,5 @@ reach: !x & Z > z & (X <-> x) | Z = z & (X <-> !x)
 goal: z = 5
 ```
 
-### Related Publication: 
+#### Related Publication: 
 “Causality-based Game Solving” by Christel Baier, Norine Coenen, Bernd Finkbeiner, Florian Funke, Simon Jantsch and Julian Siber, Accepted at CAV’21
