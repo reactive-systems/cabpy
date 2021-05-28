@@ -71,4 +71,4 @@ goal: z = 5
 #### Related Publication: 
 “Causality-Based Game Solving” by Christel Baier, Norine Coenen, Bernd Finkbeiner, Florian Funke, Simon Jantsch and Julian Siber, Accepted at CAV’21.
 
-Remark: We have observed that the number of subgames for a given benchmark varies depending on the environment. Subgame computation depends on the Craig interpolants used, and generally there is no unique inteprolant for two unsatisfiable formulas. We have noticed that the third-party tools we use for SMT solving and interpolation produce different interpolants in different environments, resulting in a varying number of subgames.
+Remark: We have observed that the number of subgames for a given benchmark varies depending on the environment. Subgame computation depends on the Craig interpolants used, and generally there is no unique interpolant for two unsatisfiable formulas. We have noticed that the third-party tools we use for SMT solving and interpolation produce different interpolants in different environments, resulting in a varying number of subgames.
